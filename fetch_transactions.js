@@ -32,7 +32,7 @@ const main = async () => {
       });
     }
 
-    // Ethereum Balance Transfer
+    // Ethereum Balance Transfer (only if MSG.VALUE != 0!)
     if (extrinsic.method.pallet.toLowerCase() === 'ethereum' && extrinsic.method.method.toLowerCase() === 'transact') {
       let amount = BigInt(0);
       let weight = BigInt(0);
